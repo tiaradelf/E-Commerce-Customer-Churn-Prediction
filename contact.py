@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 
 def tampilkan_contact():
     st.title("Contact")
@@ -20,19 +21,23 @@ def tampilkan_contact():
 
     st.divider()
 
-    st.markdown("""
-    <div style='text-align: center; font-size: 20px; margin-top: 20px;'>
-        🌟 Terima kasih telah mengeksplorasi Project Data Science ini! 🌟<br>
-        Semoga hasil analisis dan insight yang diberikan dapat bermanfaat dalam pengambilan keputusan bisnis yang lebih baik.
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div style='text-align: center; font-size: 18px; margin-top: 20px;'>
+            🌟 Terima kasih telah mengeksplorasi Project Data Science ini! 🌟<br>
+            Semoga hasil analisis dan insight yang diberikan dapat bermanfaat dalam pengambilan keputusan bisnis yang lebih baik.
+        </div>
+        """, unsafe_allow_html=True
+    )
 
     st.divider()
 
-    st.header("🎨 Data Scientist")
-    # Tampilkan gambar (gunakan use_container_width)
-    try:
-        image = Image.open("ucapan.jpg")  # Ganti dengan nama file kamu
+    st.header("🎨 Ucapan Penutup")
+
+    image_path = "ucapan.jpg"  # Pastikan file ini ada di folder utama Streamlit-mu
+
+    if os.path.exists(image_path):
+        image = Image.open(image_path)
         st.image(image, caption="Terima kasih telah menjelajahi streamlit ini!", use_container_width=True)
-    except FileNotFoundError:
-        st.warning("Gambar tidak ditemukan. Pastikan file 'ucapan.png' berada di folder yang sama dengan file Streamlit.")
+    else:
+        st.warning("❗ Gambar 'ucapan.jpg' tidak ditemukan. Pastikan file berada di direktori yang sama.")
