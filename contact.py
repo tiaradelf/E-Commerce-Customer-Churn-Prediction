@@ -32,7 +32,7 @@ def tampilkan_contact():
 
     st.divider()
 
-    st.header("🎨 Ucapan Penutup")
+    st.header("🎨 Till Next Time")
 
     image_path = "ucapan.jpg"  # Pastikan file ini ada di folder utama Streamlit-mu
 
