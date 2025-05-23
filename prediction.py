@@ -13,6 +13,7 @@ from sklearn.metrics import (
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+@st.cache_resource
 def tampilkan_prediction():
     st.title("📊 E-Commerce Customer Churn Prediction")
 

@@ -14,6 +14,7 @@ from sklearn.metrics import (
     roc_auc_score, confusion_matrix, ConfusionMatrixDisplay, roc_curve
 )
 
+@st.cache_data
 def tampilkan_eda():
     st.title("🔍 Eksplorasi Data (EDA) - Customer Churn")
 
