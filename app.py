@@ -1,8 +1,10 @@
 import streamlit as st
 
+import streamlit as st
 st.set_page_config(page_title="E-commerce Customer Churn Prediction", layout="wide", page_icon=":rocket:")
 
 st.title("Streamlytics: E-commerce Customer Churn Prediction")
+
 st.header("📊 E-Commerce Customer Churn Prediction")
 
 st.sidebar.title("Navigation")
