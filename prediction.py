@@ -12,8 +12,6 @@ from sklearn.metrics import (
 )
 import matplotlib.pyplot as plt
 import seaborn as sns
-import streamlit_profiler
-streamlit_profiler.start()  
 
 @st.cache_resource
 def tampilkan_prediction():
