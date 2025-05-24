@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import os
 
+@st.cache_resource
 def tampilkan_contact():
     st.title("Contact")
     st.write("Contact me through the following link:")

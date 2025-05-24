@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+@st.cache_resource
 def tampilkan_business_insight():
 
     st.title("📌 Business Impact Insight")
